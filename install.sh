@@ -15,7 +15,7 @@ for i in ctags git ghc cabal make vim curl-config; do
 done
 
 CABAL_VER=$(cabal --numeric-version)
-VIM_VER=$(vim --version | sed -n 's/^.*IMproved \([^ ]*\).*$/\1/p')
+VIM_VER=$(mvim --version | sed -n 's/^.*IMproved \([^ ]*\).*$/\1/p')
 GHC_VER=$(ghc --numeric-version)
 
 if ! verlte '7.4' $VIM_VER ; then
